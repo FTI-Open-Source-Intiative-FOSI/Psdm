@@ -1,0 +1,31 @@
+{
+  "name": "bintang-aktivis-kampus-fti-unand",
+  "version": "1.0.0",
+  "description": "Sistem Aplikasi Web Interaktif Pendaftaran dan Verifikasi Bintang Aktivis Kampus (BAK) BEM KM FTI UNAND - Kabinet Vismayakriya (Dinas PSDM x FOSI Dinas Ristek)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FTI-Open-Source-Intiative-FOSI/Psdm.git"
+  },
+  "keywords": [
+    "fti-unand",
+    "bem-km-fti",
+    "psdm",
+    "fosi",
+    "bintang-aktivis-kampus"
+  ],
+  "author": "FOSI Dinas Ristek x Dinas PSDM BEM KM FTI UNAND",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^11.1.0"
+  }
+}

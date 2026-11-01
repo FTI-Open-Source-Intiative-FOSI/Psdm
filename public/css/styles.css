@@ -1,0 +1,208 @@
+/* ========================================================
+   BINTANG AKTIVIS KAMPUS (BAK) FAKULTAS | BEM KM FTI UNAND
+   Theme: Editorial Cyber-Academic & Neo-Brutalist FTI UNAND
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --fti-bg: #050B14;
+  --fti-surface: #0A1322;
+  --fti-surface-elevated: #0F1D33;
+  --fti-border: rgba(0, 240, 255, 0.12);
+  --fti-border-strong: rgba(0, 240, 255, 0.3);
+  --fti-cyan: #00F0FF;
+  --fti-cyan-muted: #00B4D8;
+  --fti-navy: #0B192C;
+  --fti-gold: #FFB703;
+  --fti-gold-glow: rgba(255, 183, 3, 0.35);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--fti-bg);
+  color: #E2E8F0;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 100% 0%, rgba(0, 240, 255, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 0% 50%, rgba(255, 183, 3, 0.03) 0%, transparent 35%),
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+}
+
+.font-display {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-mono-tech {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Blueprint Line Accents */
+.border-blueprint {
+  border: 1px solid rgba(0, 240, 255, 0.16);
+}
+
+.border-blueprint-gold {
+  border: 1px solid rgba(255, 183, 3, 0.3);
+}
+
+/* Card System - Anti AI Slop */
+.dossier-card {
+  background: linear-gradient(180deg, rgba(15, 29, 51, 0.85) 0%, rgba(10, 19, 34, 0.95) 100%);
+  border: 1px solid rgba(0, 240, 255, 0.14);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.dossier-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid var(--fti-cyan);
+  border-left: 2px solid var(--fti-cyan);
+}
+
+.dossier-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid var(--fti-cyan);
+  border-right: 2px solid var(--fti-cyan);
+}
+
+.tech-panel {
+  background: rgba(10, 19, 34, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050B14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1B2E4B;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+}
+
+/* Ticker text banner */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-content {
+  display: inline-block;
+  animation: ticker 30s linear infinite;
+}
+
+/* Plaque Apresiasi Kehormatan BAK */
+.plaque-honor {
+  background: radial-gradient(circle at 50% 20%, rgba(255, 183, 3, 0.08) 0%, rgba(8, 15, 28, 0.96) 70%);
+  border: 1px solid rgba(255, 183, 3, 0.4);
+  box-shadow: 0 0 50px -10px rgba(255, 183, 3, 0.2);
+  position: relative;
+}
+
+.plaque-corner-tl {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #FFB703;
+  border-left: 3px solid #FFB703;
+}
+.plaque-corner-tr {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #FFB703;
+  border-right: 3px solid #FFB703;
+}
+.plaque-corner-bl {
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid #FFB703;
+  border-left: 3px solid #FFB703;
+}
+.plaque-corner-br {
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid #FFB703;
+  border-right: 3px solid #FFB703;
+}
+
+/* Watermark */
+.watermark-unand {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.015);
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* Custom Input Styling */
+.tech-input {
+  background: #08101E;
+  border: 1px solid #1E2D4A;
+  color: #F8FAFC;
+  transition: all 0.2s ease;
+}
+.tech-input:focus {
+  border-color: #00F0FF;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 240, 255, 0.15);
+  background: #0B172B;
+}
+
+/* Status Badges */
+.status-pill-approved {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #34D399;
+}
+.status-pill-pending {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #FBBF24;
+}
+.status-pill-revision {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #F87171;
+}
